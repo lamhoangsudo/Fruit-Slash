@@ -1,0 +1,5 @@
+Short Description:
+"Fruit Slash" is a game where you must slash all the fruits on the screen to unlock the door to the next level. Each successful slash extends your sword. The game ends when your sword stays in contact with an obstacle for too long and breaks.
+
+Long Description:
+"Fruit Slash" is an exciting and action-packed game. Your mission is to slash all the fruits that appear on the screen to unlock the door to the next level. The game starts with a basic-length sword, and each time you successfully slash a fruit, your sword extends, making it easier to slash subsequent fruits. However, be careful, because if your sword stays in contact with an obstacle for too long, it will break, and the game will end. With beautiful graphics and lively sound effects, "Fruit Slash" promises to deliver moments of exhilarating and thrilling entertainment.
