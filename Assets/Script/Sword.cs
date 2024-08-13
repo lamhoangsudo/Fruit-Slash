@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Sword : MonoBehaviour
@@ -16,12 +17,14 @@ public class Sword : MonoBehaviour
     [SerializeField] private Transform SwordVisual;
     private float scaleY;
     [SerializeField] private AudioClip audioKill;
+    private TextMeshProUGUI timeBreak;
     private AudioSource audioSource;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         joystick = GameObject.FindGameObjectWithTag(Sword_JoyStick_Rotation).GetComponent<Joystick>();
         scaleY = transform.localScale.y;
+        timeBreak = GameObject.Find("TimeBreak").GetComponent<TextMeshProUGUI>();
         Enemy.OnAnyEnemyKill += Enemy_OnAnyEnemyKill;
         Barrier.OnAnyBlock += Barrier_OnAnyBlock;
     }
@@ -45,11 +48,16 @@ public class Sword : MonoBehaviour
         if(isBlock)
         {
             timeToBreak -= Time.deltaTime;
-            Debug.Log("break" + timeToBreak);
+            int timeText = (int)timeToBreak;
+            timeBreak.text = "Break in: " + timeText.ToString();
             if (timeToBreak <= 0)
             {
                 OnAnySwordBreak?.Invoke(this, EventArgs.Empty);
             }
+        }
+        else
+        {
+            timeBreak.text = string.Empty;
         }
         if (isKill) 
         { 

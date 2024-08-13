@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Player_JoyStick_Movememnt
   - Sword_JoyStick_Rotation
+  - TimeBreak
   layers:
   - Default
   - TransparentFX
